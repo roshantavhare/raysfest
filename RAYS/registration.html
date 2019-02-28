@@ -1,0 +1,204 @@
+
+<html>
+<head>
+
+<script type="text/javascript">
+window.onload = function msg(){
+	alert("Thank you for showing Interest. Login details will be send on provided Email-ID")
+}
+function msg1(){
+	confirm("Are you sure? you Want to cancel the form?")
+}
+function msg2(){
+	confirm("Are you sure? you Want to RESET the form?")
+}
+
+function nonmemberclk(){
+	document.getElementById("non_member").setAttribute("style","display:inline")
+	document.getElementById("member").setAttribute("style","display:none")
+}
+
+function memberclk(){
+	document.getElementById("non_member").setAttribute("style","display:none")
+	document.getElementById("member").setAttribute("style","display:inline")
+}
+
+
+</script>
+
+<title>Event registration</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<style>
+		img{
+	padding:10px;
+	margin-left: 20px;
+	}
+
+
+
+.body1{
+	font-family: 'Josefin Sans', sans-serif;
+	color: black;
+	    padding-left: 90px;
+    margin-left: 120px;
+	    padding-top: 15px;
+	    background-color: #fafafa;
+}
+
+label {
+    display: inline-block;
+    margin: 5px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#rad input{
+	    display: unset;
+    width: auto;
+    height: auto;
+}
+	</style>
+
+	
+</head>
+<body style="margin: 0px">
+<div class="sidebar" style="width: 120px;background: black; height:100%; position: fixed;">
+ 
+  <div id="logo" style="width:100%; height: 16%;">
+  		<img src="images/logo.jpg"/ width="80px" height="80px" style="margin-left: 8px;">
+  		
+  </div>
+    <div class="link" style="width:100%; height: 14%;">
+  		<a href="index.html"><img src="images/home.png"/ width="60px" height="60px">
+  		<p class="icons">Home</p>
+  		</a>
+  </div>
+    <div  class="link" style="width:100%; height: 14%;">
+  		<a href="index.html#about"><img src="images/about.png" width="60px" height="60px" style="border-radius: 56%;"/>
+  		<p class="icons">About</p>
+  		</a>
+  </div>
+    <div class="link" style="width:100%; height: 14%;">
+  		<a href="events.html"><img src="images/events.png" width="60px" height="60px" style="border-radius: 56%;"/>
+  		<p class="icons">Events</p>
+  		</a>
+  </div>
+    <div class="link" style="width:100%; height: 14%;">
+  		<a href="gallery.html"><img src="images/team.png" width="60px" height="60px" style="border-radius: 56%;" />
+  		<p class="icons">Gallery</p>
+  		</a>
+  </div>
+   <div class="link"  style="width:100%; height: 14%;">
+  		<a href="index.html#contact"><img src="images/contact.png" width="60px" height="60px"/>
+  		<p class="icons">Contact</p>
+  		</a>
+  </div>
+   <div class="link" style="width:100%; height: 14%;">
+  		<a href="registration.html"><img src="images/register.png" width="60px" height="50px"/>
+  		<p class="icons">Register</p>
+  		</a>
+  </div>
+</div>
+
+
+
+<div>
+	<div class="body1">
+	<p style=" font-size: 50px; font-weight: bold; letter-spacing: 5px;">Interested in coming over?<br><span style="font-weight: normal; font-size: 22px;line-height: 50px">Registrations are open now.....</span></p>
+	<div class="btn">
+	<p style="    font-family: cursive; font-size: 26px;"><font color="red"> Are you NON-RIZVIAN??</font>
+	<button type="button" onclick="nonmemberclk()">yes</button>
+
+	<button type="button"  onclick="memberclk()">no</button>
+	</p>
+	</div>
+		<div >
+			<form class="form-control" id="member" style="display: ">
+				<div >
+					<label >Name:</label>
+					<input type="text" placeholder="Enter your full name" required>
+				</div>	
+				<div class="form-group">
+					<label>Class:</label>
+					<input type="text"   placeholder="Enter your class" required>
+				</div>
+				<div class="form-group">
+					<label>Stream:</label>
+					<input type="text"   placeholder="Enter your stream">
+				</div>
+				<div class="form-group">
+					<label>Email ID:</label>
+					<input type="email" placeholder="Enter your email ID" required>
+				</div>
+			
+				<div class="checkbox">
+					<label><input type="checkbox" style="display: unset;    width: auto;    height: auto;"> Remember me</label>
+				</div>
+				<div class="btn">
+				<button type="submit" onclick="msg()">Submit</button>
+				<button type="button" onclick="msg1()">Cancel</button>
+				<button type="reset" onclick="msg2()">Reset</button>
+				</div>  
+			</form>
+
+			
+			<form class="form-control" id="non_member" style="display: none">
+				<div><label >Name:</label>
+					<input type="text"  placeholder="Enter your full name" required></div>
+				<div><label>College name:</label>
+					<input type="text"   placeholder="Enter your college name" required></div>
+				<div><label>Class:</label>
+					<input type="text"   placeholder="Enter your class"></div>
+				
+				 <div><label>Email-ID:</label>
+					<input type="email"   placeholder="Enter your Email address" required></div>
+				<div><label>Date of Birth:</label>
+					<input type="date"></div>
+
+				<div><label>Contact no:</label>
+				     <input type="text"  placeholder="Enter contact number" required></div>
+			
+				 <div>
+				 <label>Locality:</b></label>
+				<select name="locality">
+				    <option>Mumbai</option>
+				    <option>Navi Mumbai</option>
+				    <option>Thane</option>
+				    <option>Raigad</option>
+				     <option>Pune</option>
+				     <option>Other</option>
+				  </select>
+				  </div>
+
+				  <div id="rad"><label>Gender:</b></label>
+				<input type="radio" name="gender" value="male" > Male
+				<input type="radio" name="gender" value="female">Female 
+				</div>
+
+				  <div class="btn">
+				<button type="submit" onclick="msg()">Submit</button>
+				<button type="button" onclick="msg1()">Cancel</button>
+				<button type="reset" onclick="msg2()">Reset</button>
+				</div>  
+			</form>
+				
+				
+ 			
+		</div>
+	</div>
+</div>
+<div class="footer" style="background-image: url(images/clash1.png);">
+  
+  <center>
+    <ul class="list" style="margin: 0px;display: inline-flex;   padding-left: 0px;    padding-top: 10px;">
+      <li><a href=""><img src="images/facebook.png" class="foot"></a></li>
+      <li><a href=""><img src="images/twitter.jpg" class="foot"></a></li>
+      <li><a href=""><img src="images/instagram.png" class="foot"></a></li>
+    </ul>
+    </center>
+      <font font color="white" style="padding: 1px; "><strong><center style="margin-top: -30px;">Designed and Developed By-Team Roshan
+       </center> </strong></font>
+  </div>	
+
+</body>
+</html>
